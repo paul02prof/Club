@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .parallax-wrapper {
+            perspective: 1px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Parallax Sections */
+        .parallax-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .parallax-content, .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        /* Individual Backgrounds */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+        }
+
+        .mid-banner {
+            background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308');
+        }
+
+        .footer-banner {
+            background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff');
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Text Styles */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Parallax Effect */
+        .parallax-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+            background-size: cover;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-wrapper">
+        <section class="parallax-section hero">
+            <div class="hero-content">
+                <h1>Welcome to My Parallax Site</h1>
+                <p>Scroll down to see the magic</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>First Content Section</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+            </div>
+        </section>
+
+        <section class="parallax-section mid-banner">
+            <div class="parallax-content">
+                <h2>Beautiful Parallax Effect</h2>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Second Content Section</h2>
+                <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+            </div>
+        </section>
+
+        <section class="parallax-section footer-banner">
+            <div class="parallax-content">
+                <h2>Thanks for Visiting!</h2>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

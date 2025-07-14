@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.banner .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+.banner .content .title {
+
+            font-size: 9em;
+            opacity: 0;
+
+    color: black;
+    margin-bottom: 200px;
+          animation: fadeIn 1s forwards ;   /* Apparaît après l'animation */
+        }
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(img/test3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left top;
+    z-index: 1;
+
+    mask-image: url(img/ink_lv2.gif);
+
+    mask-size: cover;
+    mask-position: center;
+}
+
+ .background-text {
+
+            font-size: 9em;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+
+            font-weight: bold;
+
+            pointer-events: none;
+        }
+
+
+
+.pysec{
+    background-image: url(img/py.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left top;
+}
+
+.active .python path{
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 0.5;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+  transform: scale(1);
+
+
+}
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Bouton SEE MORE */
+        .see-more-btn {
+            position: relative;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000;
+
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .see-more-btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .see-more-btn:active {
+            transform: translateY(1px);
+        }
+
+        .see-more-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.7s;
+        }
+
+        .see-more-btn:hover::after {
+            left: 100%;
+        }
