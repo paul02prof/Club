@@ -91,6 +91,49 @@ body {
   }
 }
 
+
+
+
+/* section 2*/
+.mdsec{
+    background-image: url(img/mod.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left top;
+}
+
+.active .model path{
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 0.5;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+  transform: scale(1);
+
+
+}
+
+/* section 3*/
+.gamsec{
+    background-image: url(img/gam.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left top;
+}
+
+.active .gam path{
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 0.5;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+  transform: scale(1.3);
+
+}
+
+
 /* Bouton SEE MORE */
         .see-more-btn {
             position: relative;
