@@ -30,11 +30,11 @@
     </button>
 </div>
 
-           <button class=" w-32 h-10  text-white text-lg font-semibold rounded-[20px]">
+           <button class=" w-32 h-10  text-white text-lg font-semibold rounded-[20px]" id="partners">
        Partners
     </button>
 
-         <button class="w-32 h-10  text-white text-lg font-semibold rounded-[20px]">
+         <button class="w-32 h-10  text-white text-lg font-semibold rounded-[20px]" id="gal">
       Gallery
     </button>
 
@@ -52,10 +52,12 @@
   // Attendre la fin de l'effet encre avant de rediriger
 
     window.location.href = 'activity.html'; // <-- Change vers ta vraie page
-
-
-
   }
+
+
+  document.getElementById('gal').addEventListener('click', () => {
+    window.location.href = 'gallery.html';
+});
 </script>
 </body>
 </html>
