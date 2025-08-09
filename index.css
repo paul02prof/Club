@@ -28,13 +28,13 @@ body{
 
 @keyframes bgZoom {
   0% {
-    transform: scale(0.2); /* zoom sur l'image principale */
+    transform: scale(1); /* zoom sur l'image principale */
   }
   50% {
-    transform: scale(1); /* état normal */
+    transform: scale(1.25); /* état normal */
   }
   100% {
-    transform: scale(1.55); /* zoom sur l'overlay */
+    transform: scale(1.50); /* zoom sur l'overlay */
   }
 }
 
