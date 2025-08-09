@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="activity.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.x.x/dist/full.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="activity.js" defer></script>
 </head>
 <body > <!--style =" overflow: hidden;" -->
 
@@ -121,38 +122,7 @@
 
  </div>
 
-  <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.section');
 
-            function checkScroll() {
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    const sectionHeight = section.offsetHeight;
-                    const triggerPoint = window.innerHeight * 0.8; // 20% de la section visible
-
-                    if (sectionTop < triggerPoint && sectionTop > -sectionHeight * 0.8) {
-                        section.classList.add('active');
-                    } else {
-                        // Optionnel: retirer la classe si on veut que l'animation se réinitialise
-                        section.classList.remove('active');
-                    }
-                });
-            }
-
-            // Vérifier au chargement
-            checkScroll();
-
-            // Vérifier au scroll
-            window.addEventListener('scroll', checkScroll);
-        });
-
-
-
-
-
-
-  </script>
 </body>
 </html>
 
