@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrez Python</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .code-block {
+            font-family: 'Courier New', monospace;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .python-keyword {
+            color: #f92672;
+        }
+        .python-function {
+            color: #66d9ef;
+        }
+        .python-string {
+            color: #e6db74;
+        }
+        .python-comment {
+            color: #75715e;
+        }
+        .python-number {
+            color: #ae81ff;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3776ab 0%, #ffd43b 100%);
+        }
+        .nav-link:hover {
+            color: #ffd43b;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white py-20 ">
+        <div class="mt-0">
+    <a href="index.html"><button class=" fixed btn btn-white btn-circle hover:btn-outline ml-[1200px] -mt-[65px]" >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"  class=" fixed size-10 stroke-1 stroke-white hover:stroke-blue-600">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      </button></a>
+
+</div>
+        <div class="container mx-auto  px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6">Découvrez <span class="underline decoration-yellow-400">Python</span></h1>
+            <p class="text-xl mb-7 max-w-2xl mx-auto">Le langage de programmation puissant et facile à apprendre</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-14 bg-white">
+        <div class="container mx-auto px-3">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Logo Python" class="w-64 mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12 -mt-3">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Qu'est-ce que Python ?</h2>
+                    <p class="text-gray-600 mb-4 text-xl">
+                        Python est un langage de programmation interprété, haut niveau et généraliste. Créé par <b>Guido van Rossum</b> et sorti en 1991, il est devenu l'un des langages les plus populaires au monde.
+                    </p>
+                    <p class="text-gray-600 text-xl">
+                        Sa philosophie met l'accent sur la lisibilité du code avec sa syntaxe claire et sa gestion automatique de la mémoire. Python est utilisé dans de nombreux domaines : développement web, science des données, intelligence artificielle, automatisation, et bien plus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages -->
+    <section id="avantages" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Pourquoi choisir Python ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-graduation-cap text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Facile à apprendre</h3>
+                    <p class="text-gray-600">
+                        La syntaxe claire et intuitive de Python le rend idéal pour les débutants en programmation.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-500 mb-4">
+                        <i class="fas fa-boxes text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Écosystème riche</h3>
+                    <p class="text-gray-600">
+                        Des milliers de bibliothèques et frameworks pour tous les besoins : Django, Flask, NumPy, Pandas, TensorFlow...
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-purple-500 mb-4">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Polyvalent</h3>
+                    <p class="text-gray-600">
+                        Développement web, analyse de données, IA, scripts d'automatisation, jeux vidéo... Python fait tout !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exemples de code -->
+    <section id="exemples" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Exemples de code Python</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">Hello World</h3>
+                    <div class="code-block p-4">
+                        <pre><code><span class="python-keyword">print</span>(<span class="python-string">"Bonjour le monde !"</span>)</code></pre>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">Boucle For</h3>
+                    <div class="code-block p-4">
+                        <pre><code><span class="python-keyword">for</span> i <span class="python-keyword">in</span> <span class="python-function">range</span>(<span class="python-number">5</span>):
+    <span class="python-keyword">print</span>(<span class="python-string">"Itération numéro"</span>, i)</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">Fonction simple</h3>
+                    <div class="code-block p-4">
+                        <pre><code><span class="python-keyword">def</span> <span class="python-function">calculer_carre</span>(x):
+    <span class="python-keyword">return</span> x * x
+
+<span class="python-comment"># Appel de la fonction</span>
+resultat = <span class="python-function">calculer_carre</span>(<span class="python-number">4</span>)
+<span class="python-keyword">print</span>(resultat)  <span class="python-comment"># Affiche 16</span></code></pre>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">Liste en compréhension</h3>
+                    <div class="code-block p-4">
+                        <pre><code><span class="python-comment"># Créer une liste des carrés des nombres pairs de 0 à 10</span>
+carres_pairs = [x*x <span class="python-keyword">for</span> x <span class="python-keyword">in</span> <span class="python-function">range</span>(<span class="python-number">11</span>) <span class="python-keyword">if</span> x % <span class="python-number">2</span> == <span class="python-number">0</span>]
+<span class="python-keyword">print</span>(carres_pairs)  <span class="python-comment"># [0, 4, 16, 36, 64, 100]</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domaines d'application -->
+<section class="py-16 bg-gradient-to-b from-gray-100 to-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Domaines d'application de Python</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Développement Web -->
+            <div class="bg-blue-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" alt="Développement Web" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Développement Web</h3>
+                <p class="text-blue-100 mb-2 text-sm">Création de sites et APIs performants avec Django, Flask, FastAPI.</p>
+                <span class="text-xs bg-white text-blue-600 px-3 py-1 rounded-full font-medium">Back-end & APIs</span>
+            </div>
+
+            <!-- Data Science -->
+            <div class="bg-green-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Data Science" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Data Science</h3>
+                <p class="text-green-100 mb-2 text-sm">Analyse, visualisation et traitement de données avec Pandas, NumPy, Matplotlib.</p>
+                <span class="text-xs bg-white text-green-600 px-3 py-1 rounded-full font-medium">Analyse & Visualisation</span>
+            </div>
+
+            <!-- IA & Machine Learning -->
+            <div class="bg-purple-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/2821/2821637.png" alt="IA" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">IA & ML</h3>
+                <p class="text-purple-100 mb-3 text-sm">Création de modèles intelligents avec TensorFlow, PyTorch, scikit-learn.</p>
+                <span class="text-xs bg-white text-purple-600 px-3 py-1 rounded-full font-medium">Neural Networks</span>
+            </div>
+
+            <!-- Automatisation (Nouvelle illustration) -->
+            <div class="bg-yellow-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/1533/1533105.png" alt="Automatisation" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Automatisation</h3>
+                <p class="text-yellow-100 mb-3 text-sm">Création de scripts, bots et outils de scraping pour gagner du temps.</p>
+                <span class="text-xs bg-white text-yellow-600 px-3 py-1 rounded-full font-medium">Productivité</span>
+            </div>
+
+            <!-- CyberSécurité -->
+            <div class="bg-red-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/2489/2489076.png" alt="CyberSécurité" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Cybersécurité</h3>
+                <p class="text-red-100 mb-3 text-sm">Détection de vulnérabilités, pentesting et analyse de sécurité</p>
+                <span class="text-xs bg-white text-red-600 px-3 py-1 rounded-full font-medium">Ethical Hacking</span>
+            </div>
+
+            <!-- Jeux Vidéo -->
+            <div class="bg-pink-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/2331/2331852.png" alt="Jeux vidéo" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Jeux Vidéo</h3>
+                <p class="text-pink-100 mb-3 text-sm">Création de jeux 2D/3D avec Pygame, Panda3D, Godot (Python API).</p>
+                <span class="text-xs bg-white text-pink-600 px-3 py-1 rounded-full font-medium">Game Dev</span>
+            </div>
+
+            <!-- IoT (Nouvelle illustration) -->
+            <div class="bg-indigo-600 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/6702/6702322.png" alt="IoT" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Objets Connectés</h3>
+                <p class="text-indigo-100 mb-3 text-sm">Contrôle de capteurs et appareils via Raspberry Pi et MicroPython.</p>
+                <span class="text-xs bg-white text-indigo-600 px-3 py-1 rounded-full font-medium">IoT & Domotique</span>
+            </div>
+
+            <!-- Blockchain (Nouvelle illustration) -->
+            <div class="bg-gray-800 text-white p-6 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl">
+                <img src="https://cdn-icons-png.flaticon.com/512/1017/1017466.png" alt="Blockchain" class="w-20 h-20 mx-auto mb-4 object-contain">
+                <h3 class="text-xl font-semibold mb-2">Blockchain</h3>
+                <p class="text-gray-300 mb-3 text-sm">Développement de smart contracts et applications décentralisées.</p>
+                <span class="text-xs bg-white text-gray-800 px-3 py-1 rounded-full font-medium">Web3 & Crypto</span>
+            </div>
+     </div>
+    </div>
+</section>
+
+<!-- Animation GSAP -->
+<script>
+    gsap.from(".grid > div", {
+        opacity: 0,
+        y: 50,
+        duration: 0.6,
+        stagger: {
+            amount: 0.8,
+            from: "random"
+        },
+        ease: "power2.out"
+    });
+</script>
+
+
+
+
+    <!-- Ressources -->
+    <section id="ressources" class="py-16 bg-white -pt-2">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Ressources pour apprendre</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-blue-50 p-4">
+                        <i class="fas fa-book text-blue-500 text-3xl mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Documentation officielle</h3>
+                        <p class="text-gray-600 mb-4">La référence complète pour tout apprendre sur Python.</p>
+                        <a href="https://docs.python.org/fr/3/" class="text-blue-500 font-medium hover:underline">Visiter le site →</a>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-green-50 p-4">
+                        <i class="fas fa-graduation-cap text-green-500 text-3xl mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Cours en ligne</h3>
+                        <p class="text-gray-600 mb-4">Apprenez Python gratuitement avec des cours interactifs.</p>
+                        <a href="https://www.learnpython.org/" class="text-green-500 font-medium hover:underline">Commencer à apprendre →</a>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-purple-50 p-4">
+                        <i class="fas fa-users text-purple-500 text-3xl mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Communauté</h3>
+                        <p class="text-gray-600 mb-4">Rejoignez la communauté Python pour poser vos questions.</p>
+                        <a href="https://www.python.org/community/" class="text-purple-500 font-medium hover:underline">Rejoindre →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 text-center ">
+            <h2 class="text-3xl font-bold mb-6">Prêt à commencer avec Python ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Téléchargez Python et lancez-vous dès aujourd'hui dans la programmation !</p>
+            <div class="flex items-center justify-center">
+
+              <a href=https://www.python.org/downloads/><button class="bg-sky-900 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 flex items-center justify-center">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+         alt="Python Logo"
+         class="h-7 w-7 mr-2">Télécharger Python
+              </button></a>
+           <a href="https://www.jetbrains.com/pycharm/download/?section=linux"> <button class="hero-gradient hover: text-gray-900 font-bold py-3 px-8 ml-6 rounded-lg text-lg transition duration-300 flex items-center justify-center">
+                <img src="https://resources.jetbrains.com/storage/products/pycharm/img/meta/pycharm_logo_300x300.png"
+         alt="PyCharm Logo"
+         class="w-7 h-7 mr-2"> Télécharger Pycharm
+            </button></a></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-1">
+            <div class=" border-gray-700 mt-2 pt-2 text-sm text-center">
+                <p>&copy; 2025 Club Robotique IUSJC. Tous droits réservés.</p>
+            </div>
+    </footer>
+
+    <script>
+        // Animation pour la navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Menu mobile (simplifié)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            alert("Menu mobile - À implémenter");
+        });
+
+        // Effet de survol sur les cartes
+        const cards = document.querySelectorAll('.bg-white');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('transform', 'scale-105');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('transform', 'scale-105');
+            });
+        });
+    </script>
+</body>
+</html>
