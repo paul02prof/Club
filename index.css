@@ -12,41 +12,29 @@ body{
   position: relative;
   overflow: hidden;
 }
+
 .banner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('img/index_bg3.jpg');
-  background-size: cover;
-  background-position: center;
-  animation: bgZoomIn 4s ease-in-out 1 forwards;
+  background:
+    url('img/after.png') top/cover no-repeat,
+    url('img/index_bg1.jpg') center/cover no-repeat;
   z-index: -1;
   pointer-events: none;
+  will-change: transform;
+  animation: bgZoom 3s ease-in-out forwards;
 }
-.banner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('img/after.png');
-  background-size: cover;
-  background-position: top;
-  transform: scale(2);
-  animation: bgZoomOut 4s ease-in-out 1 forwards;
-  z-index: -1;
-  pointer-events: none;
-}
-@keyframes bgZoomIn {
-  from {
-    transform: scale(1.2);
-  } to {
-    transform: scale(1);
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(0.2); /* zoom sur l'image principale */
   }
-}
-@keyframes bgZoomOut {
-  from {
-    transform: scale(1);
-  } to {
-    transform: scale(2);
+  50% {
+    transform: scale(1); /* état normal */
+  }
+  100% {
+    transform: scale(1.55); /* zoom sur l'overlay */
   }
 }
 

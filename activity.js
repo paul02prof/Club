@@ -11,8 +11,7 @@
                     if (sectionTop < triggerPoint && sectionTop > -sectionHeight * 0.8) {
                         section.classList.add('active');
                     } else {
-                        // Optionnel: retirer la classe si on veut que l'animation se réinitialise
-                        //section.classList.remove('active');
+
                     }
                 });
             }
