@@ -141,3 +141,37 @@ button:hover {
 }
 
 
+
+
+/* Responsive overrides for Index */
+@media (max-width: 1024px) {
+  svg path { transform: scale(1.2); }
+}
+
+@media (max-width: 768px) {
+  /* Put the Apply button in the top-right on mobile */
+  #join { position: absolute; top: 16px; right: 16px; margin: 0 !important; }
+
+  /* Reduce title svg scale for small screens */
+  svg path { transform: scale(1); }
+
+  /* Stack the bottom navigation buttons */
+  .banner > .flex { flex-direction: column; align-items: center; gap: 12px; }
+
+  /* Ensure buttons fit smaller screens */
+  button { padding: 10px 18px; }
+}
+
+@media (max-width: 480px) {
+  .banner { padding: 16px; }
+  .banner::before { background-position: center; }
+}
+
+/* Responsive title SVG */
+.title { width: 100%; }
+.title svg { width: min(92vw, 700px); height: auto; display: block; margin: 0 auto; }
+
+/* Fine-tune on very small screens */
+@media (max-width: 480px) {
+  .title svg { width: 94vw; }
+}

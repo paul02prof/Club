@@ -306,3 +306,29 @@ header a{
         font-size: 30px;
     }
 }
+
+/* Responsive overrides for Gallery */
+@media (max-width: 1024px) {
+  .carousel .list .item .content { max-width: 90%; padding-right: 10%; left: 50%; transform: translateX(-50%); }
+  .arrows { right: 10%; width: auto; max-width: none; }
+}
+
+@media (max-width: 768px) {
+  /* Place home button top-right and avoid huge margins */
+  header button { position: fixed !important; top: 12px; right: 12px; margin: 0 !important; }
+
+  .carousel { height: 100dvh; }
+  .carousel .list .item .content { top: 45%; max-width: 92%; padding-right: 0; left: 50%; transform: translateX(-50%); }
+  .carousel .list .item .title, .carousel .list .item .topic { font-size: 2.2em; }
+
+  .thumbnail { left: 50%; transform: translateX(-50%); gap: 12px; bottom: 16px; }
+  .thumbnail .item { width: 100px; height: 100px; }
+
+  .arrows { position: absolute; bottom: 90px; top: auto; right: 16px; gap: 8px; }
+  .arrows button { width: 36px; height: 36px; }
+}
+
+@media (max-width: 480px) {
+  .carousel .list .item .title, .carousel .list .item .topic { font-size: 1.8em; }
+  .thumbnail .item { width: 80px; height: 80px; }
+}

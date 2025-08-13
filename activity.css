@@ -226,3 +226,109 @@ body {
         .see-more-btn:hover::after {
             left: 100%;
         }
+
+/* Responsive overrides */
+@media (max-width: 1024px) {
+  .banner .content .title { font-size: 6em; margin-bottom: 120px; }
+  .svg-layer { width: min(80vw, 500px); height: auto; }
+}
+
+@media (max-width: 768px) {
+  /* Back/Home floating button in header area */
+  .banner .content a > button { position: fixed !important; top: 12px; left: 12px; margin: 0 !important; }
+
+  .banner { padding: 16px; align-items: flex-start; }
+  .banner .content { text-align: center; width: 100%; }
+  .banner .content .title { font-size: 3em; margin-bottom: 60px; }
+  .background-text { font-size: 3.5em; }
+
+  /* Quick links bar: unfix and center */
+  .banner .fixed.flex { position: static !important; flex-wrap: wrap; gap: 8px; justify-content: center; width: 100%; }
+
+  /* Sections: avoid fixed heights from Tailwind classes */
+  .section { height: auto !important; min-height: 70vh; padding: 32px 16px; }
+
+  /* SVG layers become fluid */
+  .svg-layer { width: 90vw; max-width: 520px; height: auto; margin: 0 auto; transform: none !important; }
+  .python, .model, .gam, .dev { width: 100%; height: auto; }
+
+  /* See more buttons centered and not absolutely positioned */
+  .see-more-btn { position: static !important; display: inline-block; margin: 16px auto !important; }
+}
+
+@media (max-width: 480px) {
+  .banner .content .title { font-size: 2.4em; margin-bottom: 40px; }
+  .background-text { font-size: 2.6em; }
+  .section { min-height: 60vh; }
+}
+
+
+/* Mobile simplifications and sizing for Activity page */
+@media (max-width: 768px) {
+  /* Remove masking and ensure proper background rendering on mobile */
+  .banner::before {
+    mask: none;
+    -webkit-mask: none;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Parallax/attachment fixed can cause jank on mobile */
+  .pysec, .mdsec, .gamsec, .devsec {
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Disable SVG draw animations and extra transforms on mobile */
+  .title svg path,
+  .active .python path,
+  .active .model path,
+  .active .gam path,
+  .active .dev path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    transform: none !important;
+    fill: #000 !important;
+  }
+
+  /* Center texts inside sections */
+  .section { text-align: center; }
+
+  /* Buttons: smaller, simpler, no hover translations or shine */
+  #main-select .see-more-btn,
+  .see-more-btn {
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 24px;
+    box-shadow: none;
+    transition: none;
+  }
+  .see-more-btn:hover,
+  .see-more-btn:active {
+    transform: none;
+    box-shadow: none;
+  }
+  .see-more-btn::after { display: none; }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce the big title on very small screens */
+  .banner .content .title { font-size: 2.1em !important; }
+
+  #main-select .see-more-btn,
+  .see-more-btn { font-size: 13px; padding: 9px 16px; border-radius: 22px; }
+}
+
+/* Responsive title SVG (Activity) */
+.banner .content .title { width: 100%; }
+.banner .content .title svg { width: min(92vw, 700px); height: auto; display: block; margin: 0 auto !important; }
+
+/* Ensure left margin removed from Tailwind utility at common breakpoints */
+@media (max-width: 1024px) {
+  .banner .content .title svg { margin-left: 0 !important; }
+}
+
+@media (max-width: 480px) {
+  .banner .content .title svg { width: 94vw; }
+}
