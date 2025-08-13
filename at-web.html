@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Devweb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .large-grid-bg {
+                background-image:
+                    linear-gradient(to right, #333 1px, transparent 1px),
+                    linear-gradient(to bottom, #333 1px, transparent 1px);
+                background-size: 50px 50px;
+            }
+        }
+    </style>
+</head>
+<body class="h-full bg-black large-grid-bg">
+    <div class="container mx-auto p-8 text-white relative z-10">
+         <!-- Overlay lumineux limité en haut à droite, aligné sur la grille 50px -->
+        <div id="bg-light-overlay" class="fixed pointer-events-none select-none z-0 right-4 top-[6rem]">
+            <div class="grid" style="justify-content:start; align-content:start;"></div>
+        </div>
+        <h1 class="backdrop-blur-xs tracking-tight leading-tight mt-24 mb-8">
+            <span class="block text-4xl md:text-8xl font-bold text-emerald-200/90">Atelier</span>
+            <span class="block text-7xl md:text-9xl font-extrabold">Devweb</span>
+        </h1>
+        <a href="index.html"><button class=" fixed btn btn-white btn-circle hover:btn-outline ml-[1175px] -mt-[380px]" >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"  class=" fixed size-10 stroke-1 stroke-white hover:stroke-emerald-200/90">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      </button></a>
+
+
+
+        <div class="space-y-8">
+            <!-- Introduction courte -->
+            <div class="backdrop-blur-md bg-emerald-200/20 border border-emerald-400/30 rounded-2xl p-6 shadow-lg">
+                <p class="text-lg/relaxed">
+                    Bienvenue à l'atelier de développement web. Découvrez les technologies et l'organisation des sections ci‑dessous.
+                </p>
+            </div>
+
+            <!-- Section: Technologies utilisées -->
+            <section class="m-6 backdrop-blur-md bg-emerald-200/20 border border-emerald-400/30 rounded-2xl p-6 shadow-lg">
+                <h2 class="text-2xl md:text-4xl font-extrabold mb-6">Technologies utilisées</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-8 gap-6 items-center">
+                    <!-- Frameworks frontend -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">React</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Angular</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue.js" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Vue.js</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/svelte/FF3E00" alt="Svelte" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Svelte</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Next.js</span>
+                    </div>
+                    <!-- Backend & runtimes -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/django/44B78B" alt="Django" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Django</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Node.js</span>
+                    </div>
+                    <!-- Langages -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Python</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">TypeScript</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/go/00ADD8" alt="Go" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Go</span>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">PHP</span>
+                    </div>
+                    <!-- Bases de données -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">PostgreSQL</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">MySQL</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">MongoDB</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQLite" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">SQLite</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Redis</span>
+                    </div>
+                    <!-- Web de base -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/css/663399" alt="CSS3" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">CSS</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">Tailwind</span>
+                    </div>
+                    <!-- IA -->
+                    <div class="flex flex-col items-center gap-2">
+                        <img src="https://cdn.simpleicons.org/openai/00A67E" alt="ChatGPT (OpenAI)" class="h-12 md:h-14"/>
+                        <span class="text-sm text-emerald-100/90">ChatGPT</span>
+                    </div>
+                    <!-- DeepSeek & Junie: chips stylés si pas d'icône Simple Icons -->
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="h-12 w-12 md:h-14 md:w-14 rounded-full bg-emerald-400/20 border border-emerald-300/40 grid place-items-center text-emerald-200 font-semibold">DS</div>
+                        <span class="text-sm text-emerald-100/90">DeepSeek</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="h-12 w-12 md:h-14 md:w-14 rounded-full bg-emerald-400/20 border border-emerald-300/40 grid place-items-center text-emerald-200 font-semibold">J</div>
+                        <span class="text-sm text-emerald-100/90">Junie</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Frontend + Backend côte à côte -->
+            <div class="grid m-6 p-2 gap-12 md:grid-cols-2">
+                <!-- Section: Frontend -->
+                <section class="backdrop-blur-sm bg-emerald-200/20 border border-emerald-400/30 rounded-2xl p-6 shadow-lg h-full">
+                    <div class="flex items-start gap-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-emerald-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                        <h2 class="text-3xl md:text-4xl font-extrabold">Frontend</h2>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div>
+                            <p class="text-lg md:text-xl lg:text-2xl text-emerald-50/90">
+                                Créez des interfaces modernes avec une base HTML sémantique, des styles rapides grâce à Tailwind CSS et
+                                une interactivité riche via JavaScript/React.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="space-y-3 text-base md:text-lg lg:text-xl text-emerald-50/90">
+                                <li class="flex items-start gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 10.5a1 1 0 111.414-1.414l3.002 3.002 7.543-7.543a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    Composants réutilisables et accessibles.
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 10.5a1 1 0 111.414-1.414l3.002 3.002 7.543-7.543a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    Styles utilitaires Tailwind pour prototyper très vite.
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 10.5a1 1 0 111.414-1.414l3.002 3.002 7.543-7.543a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    Intégration d’icônes et d’animations légères.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Backend -->
+                <section class="backdrop-blur-sm bg-emerald-200/20 border border-emerald-400/30 rounded-2xl p-6 shadow-lg h-full">
+                    <div class="flex items-start gap-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-emerald-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7" />
+                        </svg>
+                        <h2 class="text-3xl md:text-4xl font-extrabold">Backend</h2>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div>
+                            <p class="text-lg md:text-xl lg:text-2xl text-emerald-50/90">
+                                Conception d’API, gestion des données et sécurité côté serveur avec Django (ou Node.js selon les besoins).
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="space-y-3 text-base md:text-lg lg:text-xl text-emerald-50/90">
+                                <li class="flex items-start gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 10.5a1 1 0 111.414-1.414l3.002 3.002 7.543-7.543a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    Authentification et autorisation, bonnes pratiques de sécurité.
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 10.5a1 1 0 111.414-1.414l3.002 3.002 7.543-7.543a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    ORM et migrations de base de données (Django ORM).
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 text-emerald-300" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0L3.293 10.5a1 1 0 111.414-1.414l3.002 3.002 7.543-7.543a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    Documentation et tests d’API (OpenAPI, pytest/django).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Section: Fonctionnalités inspirées -->
+            <section class="backdrop-blur-[2px] p-6">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-emerald-200/90">Fonctionnalités inspirées</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="rounded-xl border border-emerald-400/30 p-4 bg-black/20">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-300" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14A1 1 0 003 18h14a1 1 0 00.894-1.447l-7-14z"/></svg>
+                            <h3 class="font-semibold">Guides pas à pas</h3>
+                        </div>
+                        <p class="text-emerald-50/90 text-sm">Des étapes claires pour construire une app complète du front au back.</p>
+                    </div>
+                    <div class="rounded-xl border border-emerald-400/30 p-4 bg-black/20">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-300" viewBox="0 0 20 20" fill="currentColor"><path d="M11.3 1.046a1 1 0 00-1.6 0L2.1 10.3A2 2 0 003.7 13h12.6a2 2 0 001.6-2.7L11.3 1.046z"/></svg>
+                            <h3 class="font-semibold">Outils modernes</h3>
+                        </div>
+                        <p class="text-emerald-50/90 text-sm">Stack actuelle: React, Tailwind, Django, API REST.</p>
+                    </div>
+                    <div class="rounded-xl border border-emerald-400/30 p-4 bg-black/20">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-300" viewBox="0 0 20 20" fill="currentColor"><path d="M4 3a1 1 0 000 2h2l1 12a2 2 0 002 2h2a2 2 0 002-2l1-12h2a1 1 0 100-2H4z"/></svg>
+                            <h3 class="font-semibold">Productivité</h3>
+                        </div>
+                        <p class="text-emerald-50/90 text-sm">Raccourcis, templates et bonnes pratiques pour aller vite.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Ressources -->
+            <section class="backdrop-blur-md bg-emerald-200/20 border border-emerald-400/30 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-start gap-3 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-300 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 5a2 2 0 012-2h5a2 2 0 012 2v1h5a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-1H4a2 2 0 01-2-2V5z"/>
+                    </svg>
+                    <h2 class="text-2xl md:text-3xl font-bold">Ressources</h2>
+                </div>
+                <ul class="text-emerald-50/90 space-y-3">
+                    <li class="flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 text-emerald-300" viewBox="0 0 20 20" fill="currentColor"><path d="M4 3a1 1 0 000 2h6a1 1 0 010 2H6a1 1 0 100 2h3a1 1 0 010 2H4a1 1 0 100 2h8a1 1 0 010 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
+                        <span>
+                            <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="underline decoration-emerald-400/50 hover:text-emerald-200">React – Documentation officielle</a>
+                            &nbsp;•&nbsp;
+                            <a href="https://docs.djangoproject.com/" target="_blank" rel="noopener noreferrer" class="underline decoration-emerald-400/50 hover:text-emerald-200">Django – Documentation officielle</a>
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 text-emerald-300" viewBox="0 0 20 20" fill="currentColor"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h6a2 2 0 002-2v-3l6-3-6-3V5a2 2 0 00-2-2H4z"/></svg>
+                        <span>
+                            <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="underline decoration-emerald-400/50 hover:text-emerald-200">MDN – HTML</a>
+                            &nbsp;•&nbsp;
+                            <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="underline decoration-emerald-400/50 hover:text-emerald-200">MDN – CSS</a>
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 text-emerald-300" viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 00-1 1v3H7a1 1 0 000 2h3v3a1 1 0 002 0V9h3a1 1 0 100-2h-3V4a1 1 0 00-1-1z"/></svg>
+                        <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" class="underline decoration-emerald-400/50 hover:text-emerald-200">Tailwind CSS – Documentation</a>
+                    </li>
+                </ul>
+            </section>
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-sm text-emerald-100/70">
+            © 2025 Club Robotique — Tous droits réservés.
+        </footer>
+        </div>
+    </div>
+<script>
+// Effet lumineux aligné sur la grille 50px (.large-grid-bg)
+(function(){
+  const CELL = 50; // Doit correspondre à background-size de .large-grid-bg
+  const host = document.body;
+  if (!host.classList.contains('large-grid-bg')) return;
+
+  const overlay = document.getElementById('bg-light-overlay');
+  if (!overlay) return;
+  const grid = overlay.querySelector('.grid');
+  if (!grid) return;
+
+  let cells = [];
+  let active = new Set();
+  let running = false;
+  const COLS = 24; // nombre de colonnes en haut à droite
+  const ROWS = 14;  // nombre de lignes en haut à droite
+
+  function buildGrid() {
+    // Nettoyer
+    active.clear();
+    cells = [];
+    grid.innerHTML = '';
+
+    const cols = COLS;
+    const rows = ROWS;
+
+    // Appliquer la taille et la grille
+    grid.style.display = 'grid';
+    grid.style.gridTemplateColumns = `repeat(${cols}, ${CELL}px)`;
+    grid.style.gridTemplateRows = `repeat(${rows}, ${CELL}px)`;
+    grid.style.gap = '1px';
+
+    // Fixer la taille du conteneur pour coller aux cellules 50px
+    const overlay = document.getElementById('bg-light-overlay');
+    if (overlay) {
+      const gapPx = 1; // doit correspondre à grid.style.gap ci-dessus
+      const w = cols * CELL + (cols - 1) * gapPx;
+      const h = rows * CELL + (rows - 1) * gapPx;
+      overlay.style.width = w + 'px';
+      overlay.style.height = h + 'px';
+    }
+
+    const total = cols * rows;
+    for (let i = 0; i < total; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'h-full w-full bg-white/0 transition-colors duration-300 ease-out';
+      cells.push(cell);
+      grid.appendChild(cell);
+    }
+  }
+
+  function flashOne() {
+    if (cells.length === 0) return;
+    let idx = Math.floor(Math.random() * cells.length);
+    let tries = 0;
+    while (active.has(idx) && tries < 10) { idx = Math.floor(Math.random() * cells.length); tries++; }
+    if (active.has(idx)) return;
+
+    const cell = cells[idx];
+    if (!cell) return;
+
+    active.add(idx);
+    const green = Math.random() < 0.55; // ~55% vert, sinon blanc
+
+    cell.classList.remove('bg-white/0');
+    if (green) {
+      cell.classList.add('bg-emerald-400');
+      cell.style.filter = 'drop-shadow(0 0 10px rgba(16,185,129,0.7))';
+    } else {
+      cell.classList.add('bg-white');
+      cell.style.filter = 'drop-shadow(0 0 10px rgba(255,255,255,0.35))';
+    }
+
+    const duration = 3000 + Math.floor(Math.random() * 2000); // 3000–5000ms (très lent)
+    setTimeout(() => {
+      cell.classList.remove('bg-emerald-400', 'bg-white');
+      cell.classList.add('bg-white/0');
+      cell.style.filter = '';
+      active.delete(idx);
+    }, duration);
+  }
+
+  function loop() {
+    if (!running) return;
+    const maxConcurrent = 10; // très peu de cases actives (lent)
+    const toLaunch = 1 + Math.floor(Math.random() * 2); // 1 à 2 (lent)
+    for (let i = 0; i < toLaunch; i++) {
+      if (active.size < maxConcurrent) flashOne();
+    }
+    const delay = 900 + Math.floor(Math.random() * 500); // 900–1400ms (rythme global très lent)
+    setTimeout(loop, delay);
+  }
+
+  function start() {
+    if (running) return;
+    running = true;
+    loop();
+  }
+  function stop() { running = false; active.clear(); }
+
+  // Construction initiale
+  buildGrid();
+  if (document.visibilityState === 'visible') start();
+
+  // Reagir à la visibilité
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') start();
+    else stop();
+  });
+
+  // Adapter au redimensionnement
+  let resizeTO;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTO);
+    resizeTO = setTimeout(() => {
+      buildGrid();
+    }, 120);
+  });
+})();
+</script>
+</body>
+</html>
