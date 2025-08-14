@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Game Dev</title>
+
+  <!-- DaisyUI & Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.x.x/dist/full.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Image de fond + overlay */
+    body {
+      background: url('./img/gamedev.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5); /* Couche transparente sombre */
+      z-index: -1;
+    }
+
+    /* Effet glassmorphism */
+    .glass-tile {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .glass-tile:hover {
+      border-color: rgba(167, 139, 250, 0.9);
+      box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+      transform: scale(1.03);
+    }
+    .show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bannière -->
+  <header class="min-h-[50vh] flex flex-col justify-center items-center text-center p-6">
+    <h1 class="text-5xl font-bold drop-shadow-lg">Atelier Game Dev</h1>
+    <p class="mt-4 text-lg max-w-3xl drop-shadow-md">
+      Plongez dans le monde du développement de jeux vidéo en apprenant les bases du game design, 
+      de la programmation, et de la création d’assets 3D.
+    </p>
+  </header>
+
+  <!-- Sections -->
+  <main class="max-w-6xl mx-auto p-6 grid gap-8 md:grid-cols-2">
+    
+    <section class="glass-tile">
+      <h2 class="text-3xl font-bold text-violet-400 mb-4">À propos</h2>
+      <p>
+        L’atelier Game Dev vous initie aux différentes étapes de création d’un jeu vidéo : 
+        conception des mécaniques, développement du gameplay, intégration des assets, 
+        et optimisation des performances.
+      </p>
+    </section>
+
+    <section class="glass-tile">
+      <h3 class="text-2xl font-semibold text-violet-400 mb-3">Game Design</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Création de concepts et mécaniques de jeu</li>
+        <li>Équilibrage et progression</li>
+        <li>Level design et narration interactive</li>
+      </ul>
+    </section>
+
+    <section class="glass-tile">
+      <h3 class="text-2xl font-semibold text-violet-400 mb-3">Programmation</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Scripts de gameplay (C#, C++, GDScript)</li>
+        <li>Gestion des entrées et de la physique</li>
+        <li>Optimisation et débogage</li>
+      </ul>
+    </section>
+
+    <section class="glass-tile md:col-span-2">
+  <h2 class="text-3xl font-bold text-violet-400 mb-4">Technologies utilisées</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
+    
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Unity_Technologies_logo.svg" 
+           alt="Unity" class="h-16 mx-auto">
+      <p>Unity</p>
+    </div>
+    
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/UE_Logo_Black_Centered.svg" 
+           alt="Unreal Engine" class="h-16 mx-auto">
+      <p>Unreal</p>
+    </div>
+    
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" 
+           alt="Godot" class="h-16 mx-auto">
+      <p>Godot</p>
+    </div>
+    
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/C_Sharp_Logo_2023.svg?width=128" 
+           alt="C#" class="h-16 mx-auto">
+      <p>C#</p>
+    </div>
+    
+    <div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ISO_C++_Logo.svg?width=128" 
+           alt="C++" class="h-16 mx-auto">
+      <p>C++</p>
+    </div>
+    
+    <div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Blender.svg?width=128" 
+           alt="Blender" class="h-16 mx-auto">
+      <p>Blender</p>
+    </div>
+    
+  </div>
+</section>
+
+    <section class="glass-tile md:col-span-2">
+      <h2 class="text-3xl font-bold text-violet-400 mb-4">Ressources utiles</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><a href="https://docs.unity.com" class="text-violet-300 hover:underline">Documentation Unity</a></li>
+        <li><a href="https://docs.unrealengine.com" class="text-violet-300 hover:underline">Documentation Unreal Engine</a></li>
+        <li><a href="https://docs.godotengine.org" class="text-violet-300 hover:underline">Documentation Godot</a></li>
+        <li><a href="https://www.blender.org" class="text-violet-300 hover:underline">Blender 3D</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Bouton retour -->
+  <footer class="text-center py-6">
+    <a href="activity.html" class="btn btn-outline btn-violet">© 2025 Club Robotique — Tous droits réservés.</a>
+  </footer>
+
+  <!-- Script apparition au scroll avec cascade -->
+  <script>
+    const tiles = document.querySelectorAll('.glass-tile');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          entry.target.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
+        }
+      });
+    }, { threshold: 0.2 });
+    tiles.forEach(tile => observer.observe(tile));
+  </script>
+
+</body>
+</html>
