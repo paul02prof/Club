@@ -1,6 +1,9 @@
 body{
   margin: 0;
   font-size: 5em;
+    background:
+
+    url('img/backg.jpg') center/cover no-repeat;
 
 }
 .banner {
@@ -13,30 +16,8 @@ body{
   overflow: hidden;
 }
 
-.banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    url('img/after.png') top/cover no-repeat,
-    url('img/index_bg1.jpg') center/cover no-repeat;
-  z-index: -1;
-  pointer-events: none;
-  will-change: transform;
-  animation: bgZoom 3s ease-in-out forwards;
-}
 
-@keyframes bgZoom {
-  0% {
-    transform: scale(1); /* zoom sur l'image principale */
-  }
-  50% {
-    transform: scale(1.25); /* état normal */
-  }
-  100% {
-    transform: scale(1.50); /* zoom sur l'overlay */
-  }
-}
+
 
 svg path {
   fill: transparent;
@@ -80,51 +61,6 @@ button:hover {
     position: relative;
 }
 
-@property --angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0deg;
-}
-.box::after,
-.box::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    --angle: 0deg;
-    background-image: conic-gradient(
-        from var(--angle), #2c3c31, #324732, #0d3502
-    );
-    animation: autoRotate 2s linear infinite;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    padding: 5px;
-    box-sizing: unset;
-}
-.box::after {
-    filter: blur(60px);
-}
-
-.box:hover::before,
-.box:hover::after {
-    background-image: conic-gradient(
-        from var(--angle),
-        #ff6b6b,  /* Nouvelle couleur 1 */
-        #4ecdc4,  /* Nouvelle couleur 2 */
-        #45aaf2   /* Nouvelle couleur 3 */
-    );
-    animation-duration: 1s; /* Animation plus rapide au survol */
-}
-
-
-@keyframes autoRotate {
-    to {
-        --angle: 360deg;
-    }
-}
 
 
 button {
@@ -143,35 +79,10 @@ button:hover {
 
 
 
-/* Responsive overrides for Index */
-@media (max-width: 1024px) {
-  svg path { transform: scale(1.2); }
-}
 
-@media (max-width: 768px) {
-  /* Put the Apply button in the top-right on mobile */
-  #join { position: absolute; top: 16px; right: 16px; margin: 0 !important; }
-
-  /* Reduce title svg scale for small screens */
-  svg path { transform: scale(1); }
-
-  /* Stack the bottom navigation buttons */
-  .banner > .flex { flex-direction: column; align-items: center; gap: 12px; }
-
-  /* Ensure buttons fit smaller screens */
-  button { padding: 10px 18px; }
-}
-
-@media (max-width: 480px) {
-  .banner { padding: 16px; }
-  .banner::before { background-position: center; }
-}
 
 /* Responsive title SVG */
 .title { width: 100%; }
 .title svg { width: min(92vw, 700px); height: auto; display: block; margin: 0 auto; }
 
 /* Fine-tune on very small screens */
-@media (max-width: 480px) {
-  .title svg { width: 94vw; }
-}
